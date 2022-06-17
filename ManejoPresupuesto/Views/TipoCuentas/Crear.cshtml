@@ -1,0 +1,53 @@
+﻿@model TipoCuenta
+@{
+    ViewData["Title"] = "Crear tipo Cuenta";
+}
+
+
+<h1>Crear tipo cuenta</h1>
+<h5>El tipo de cuenta se refiere a como podemos agrupar cuentas.
+    Ejemplos: Prestamos, tarjetas de credito, etc.</h5>
+
+    <div asp-validation-summary="ModelOnly" class="text-danger" ></div>
+
+    <form  asp-action="Crear">
+
+        <div class="mb-3">
+            <label asp-for="Nombre" class="form-label"></label>   
+            <input type="text" asp-for="Nombre" id="Nombre" name="Nombre" class="form-control"/>
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+@*
+        <div class="mb-3">
+              <label asp-for="Email" class="form-label"></label>   
+            <input type="text" asp-for="Email" id="Email" name="Email" class="form-control"/>
+             <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+         <div class="mb-3">
+              <label asp-for="Edad" class="form-label"></label>   
+             <input asp-for="Edad"  class="form-control"/>
+              <span asp-validation-for="Edad" class="text-danger"></span>
+        </div>
+
+          <div class="mb-3">
+              <label asp-for="URL" class="form-label"></label>   
+             <input asp-for="URL"  class="form-control"/>
+              <span asp-validation-for="URL" class="text-danger"></span>
+        </div>
+
+         <div class="mb-3">
+              <label asp-for="TarjetaDeCredtio" class="form-label"></label>   
+             <input asp-for="TarjetaDeCredtio"  class="form-control"/>
+              <span asp-validation-for="TarjetaDeCredtio" class="text-danger"></span>
+        </div>*@
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+    </form>
+
+
+   @section Scripts{
+    <partial name="_ValidationScriptsPartial"/>
+
+   }
